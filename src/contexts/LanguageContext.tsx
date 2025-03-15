@@ -1,4 +1,3 @@
-
 import { createContext, useContext, useState, ReactNode } from 'react';
 
 type Language = 'en' | 'es';
@@ -183,6 +182,15 @@ export const translations: Translations = {
   viewMore: {
     en: 'View More',
     es: 'Ver Más'
+  },
+  // Call-related
+  callNow: {
+    en: 'Call Us Now',
+    es: 'Llámanos Ahora'
+  },
+  getCallback: {
+    en: 'Get a Callback',
+    es: 'Recibir una Llamada'
   }
 };
 

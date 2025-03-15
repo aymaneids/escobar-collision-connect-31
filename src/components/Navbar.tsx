@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             <Link to="/" className="font-inter text-escobar-navy hover:text-escobar-red transition-colors">
               {t('home')}
             </Link>
@@ -57,8 +57,14 @@ const Navbar = () => {
             >
               {language === 'en' ? 'ES' : 'EN'}
             </Button>
+            <Button asChild variant="outline" className="border-escobar-red text-escobar-red hover:bg-escobar-red/10">
+              <Link to="/estimate">{t('getEstimate')}</Link>
+            </Button>
             <Button asChild variant="default" className="bg-escobar-red hover:bg-red-700 text-white">
-              <a href="tel:+15555555555">{t('getEstimate')}</a>
+              <Link to="/call-us">
+                <Phone className="mr-2" size={16} />
+                {language === 'en' ? 'Call Us Now' : 'Llámanos Ahora'}
+              </Link>
             </Button>
           </nav>
 
@@ -122,8 +128,18 @@ const Navbar = () => {
               >
                 {t('contact')}
               </Link>
+              <Link 
+                to="/estimate" 
+                className="font-inter text-escobar-red font-medium hover:text-escobar-navy transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('getEstimate')}
+              </Link>
               <Button asChild variant="default" className="bg-escobar-red hover:bg-red-700 text-white w-full">
-                <a href="tel:+15555555555">{t('getEstimate')}</a>
+                <Link to="/call-us" onClick={() => setIsMobileMenuOpen(false)}>
+                  <Phone className="mr-2" size={16} />
+                  {language === 'en' ? 'Call Us Now' : 'Llámanos Ahora'}
+                </Link>
               </Button>
             </nav>
           </div>
