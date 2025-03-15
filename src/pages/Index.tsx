@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Car, Hammer, Ruler, PaintBucket, CheckCircle, Star } from 'lucide-react';
 
 const Index = () => {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const navigate = useNavigate();
 
   return (

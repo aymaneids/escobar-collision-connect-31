@@ -1,8 +1,7 @@
-
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { Car, Hammer, Ruler, PaintBucket, Tool, Wrench, FileCheck, Clock } from 'lucide-react';
+import { Car, Hammer, Ruler, PaintBucket, Wrench, FileCheck, Clock } from 'lucide-react';
 
 const Services = () => {
   const { language, t } = useLanguage();
@@ -271,7 +270,7 @@ const Services = () => {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
               <div className="inline-flex items-center justify-center w-12 h-12 bg-escobar-navy/10 text-escobar-navy rounded-full mb-4">
-                <Tool size={24} />
+                <Wrench size={24} />
               </div>
               <h3 className="text-xl font-montserrat font-semibold mb-3">
                 {language === 'en' ? 'Glass Replacement' : 'Reemplazo de Vidrios'}

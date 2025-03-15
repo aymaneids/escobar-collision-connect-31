@@ -1,8 +1,7 @@
-
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { Shield, Users, Tool, Award, CheckCircle } from 'lucide-react';
+import { Shield, Users, Wrench, Award, CheckCircle } from 'lucide-react';
 
 const About = () => {
   const { language, t } = useLanguage();
@@ -117,7 +116,7 @@ const About = () => {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-escobar-navy/10 text-escobar-navy rounded-full mb-6">
-                <Tool size={32} />
+                <Wrench size={32} />
               </div>
               <h3 className="text-xl font-montserrat font-semibold mb-3">
                 {language === 'en' ? 'Innovation' : 'Innovación'}
