@@ -2,6 +2,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Car, Hammer, Ruler, PaintBucket, CheckCircle, Star } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   const { language, t } = useLanguage();
@@ -9,6 +11,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Navbar />
+      
       {/* Hero Section */}
       <section 
         className="relative pt-32 pb-20 md:pt-40 md:pb-32 bg-cover bg-center" 
@@ -378,6 +382,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

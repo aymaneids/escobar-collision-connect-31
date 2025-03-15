@@ -2,6 +2,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { Shield, Users, Wrench, Award, CheckCircle } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const About = () => {
   const { language, t } = useLanguage();
@@ -9,6 +11,8 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-white pt-24">
+      <Navbar />
+      
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-escobar-navy text-white">
         <div className="container mx-auto px-4">
@@ -243,7 +247,7 @@ const About = () => {
           <p className="max-w-2xl mx-auto mb-8 text-white/80">
             {language === 'en'
               ? 'Contact us today for a free estimate. Our experienced team is ready to restore your vehicle with the highest standards of quality and service.'
-              : 'Contáctenos hoy para un presupuesto gratuito. Nuestro experimentado equipo está listo para restaurar su vehículo con los más altos estándares de calidad y servicio.'}
+              : 'Cont��ctenos hoy para un presupuesto gratuito. Nuestro experimentado equipo está listo para restaurar su vehículo con los más altos estándares de calidad y servicio.'}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -262,6 +266,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
