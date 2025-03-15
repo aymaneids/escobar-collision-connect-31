@@ -2,6 +2,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import { Car, Hammer, Ruler, PaintBucket, Wrench, FileCheck, Clock } from 'lucide-react';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const Services = () => {
   const { language, t } = useLanguage();
@@ -9,6 +11,8 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white pt-24">
+      <Navbar />
+      
       {/* Hero Section */}
       <section className="py-12 md:py-20 bg-escobar-navy text-white">
         <div className="container mx-auto px-4">
@@ -367,6 +371,8 @@ const Services = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
